@@ -1,0 +1,54 @@
+<p> Modifier utilisateur</p>
+<div class="container">
+  <form class="row g-3 needs-validation" novalidate>
+    <div class="col-md-5">
+      <label for="validationCustom01" class="form-label">First name</label>
+      <div class="input-group has-validation">
+        <span class="input-group-text" id="inputGroupPrepend"></span>
+      <input type="text" class="form-control" id="validationCustom01" [(ngModel)]="utilisateur.firstname" [ngModelOptions]="{standalone: true}" >
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+      </div>
+
+    </div>
+    <div class="col-md-5">
+      <label for="validationCustom02" class="form-label">Last name</label>
+      <div class="input-group has-validation">
+        <span class="input-group-text" id="inputGroupPrepend"></span>
+        <input type="text" class="form-control" id="validationCustom02" [(ngModel)]="utilisateur.lastname" [ngModelOptions]="{standalone: true}" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="col-md-5">
+      <label for="validationCustomUsername" class="form-label">Email</label>
+      <div class="input-group has-validation">
+        <span class="input-group-text" id="inputGroupPrepend"></span>
+        <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend"
+        [(ngModel)]="utilisateur.email" [ngModelOptions]="{standalone: true}" required>
+        <div class="invalid-feedback">
+          Please choose a email
+        </div>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <label for="validationCustom03" class="form-label">Phone</label>
+      <div class="input-group has-validation">
+        <span class="input-group-text" id="inputGroupPrepend"></span>
+      <input type="text" class="form-control" id="validationCustom03"
+      [(ngModel)]="utilisateur.phone" [ngModelOptions]="{standalone: true}" required>
+      <div class="invalid-feedback">
+        Please provide a valid phone.
+      </div>
+    </div>
+    </div>
+
+    <div class="col-12">
+      <button class="btn btn-primary" type="submit" (click)="updateUtilisateur()">Submit</button>
+    </div>
+  </form>
+
+</div>

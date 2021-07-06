@@ -1,0 +1,40 @@
+<div class="container">
+  <p>utilisateurs-list</p>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Firstname</th>
+        <th scope="col">Lastname</th>
+        <th scope="col">Email</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- <tr *ngFor="let user of utilisateurs  | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize"> -->
+
+      <tr *ngFor="let user of utilisateurs ">
+        <th>{{user.firstname}}</th>
+        <th>{{user.lastname}}</th>
+        <th>{{user.email}}</th>
+        <th>{{user.phone}}</th>
+        <th>
+          <a (click)="onEditUtilisateur(user.id)" class="clickable">
+              edit
+          </a>
+        </th>
+        <th>
+          <a (click)="onDeleteUtilisateur(user)" class="clickable">
+            <span>
+              del
+            </span>
+            <!-- Del -->
+          </a>
+        </th>
+
+      </tr>
+    </tbody>
+  </table>
+  <!-- <ngb-pagination [collectionSize]="utilisateurs.length" [(page)]="page" [maxSize]="5" [rotate]="true" [ellipses]="false" [boundaryLinks]="true"></ngb-pagination> -->
+
+  </div>
